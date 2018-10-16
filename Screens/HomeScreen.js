@@ -38,8 +38,8 @@ export default class HomeScreen extends React.Component {
                     {..._data}
                     // pass in function to call onPress
                     onItemPressed={this.onItemPressed}
-                    // Pass the context function into component
-                    // as a property
+                    // Pass context function into component
+                    // as prop
                     setCurrentItem={setCurrentItem}
                   />
                 );
@@ -57,9 +57,8 @@ export default class HomeScreen extends React.Component {
  * @param {*} param0
  */
 const RowItem = ({ setCurrentItem, item, index, onItemPressed }) => {
-
   /**
-   * when pressed set current item in context and then call the 
+   * when pressed set current item in context and then call the
    * handler that was passed in
    */
   onPressed = () => {
