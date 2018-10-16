@@ -5,7 +5,7 @@ export const ShoppingContext = React.createContext();
 class ShoppingProvider extends React.Component {
   constructor(props) {
     super(props);
-    // list data for FlatList
+    // list data for FlatList to render
     this.state = {
       listData: [
         { key: "user1", name: "Aaron Saunders" },
@@ -17,6 +17,10 @@ class ShoppingProvider extends React.Component {
     };
   }
 
+  /**
+   * function to set which item is the currently selected item
+   * this way we are managing the object(s) here in the context
+   */
   setCurrentItem = (currentItem) => {
     this.setState({ currentItem });
   }
